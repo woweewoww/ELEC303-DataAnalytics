@@ -1,0 +1,15 @@
+{% extends 'online_enrollment.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+<h2> SUBJECT </h2>
+<ul>
+    {% for subject in subjects %}
+        <li>{{ subject.subject_code|upper}} - {{ subject.time}} - {{ subject.day}} - {{ subject.unit}} - {{ subject.room}}</li>
+        {% empty %}
+
+        {% endfor %}
+</ul>
+
+{% endblock %}
+

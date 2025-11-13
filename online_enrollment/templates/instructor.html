@@ -1,0 +1,18 @@
+{% extends 'online_enrollment.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+<h2> INSTRUCTOR INFORMATION </h2>
+<ul>
+    {% for instructor in instructor %}
+        <li>{{ instructor.first_name|upper}}
+            {{ instructor.last_name}}
+            {{ instructor.email}}
+            {{ instructor.contact_no}} 
+            {{ instructor.department}}</li>
+        {% empty %}
+
+        {% endfor %}
+</ul>
+
+{% endblock %}
